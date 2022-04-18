@@ -3,7 +3,6 @@ import styledComponents from "styled-components";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
-
 const FooterEnd = styledComponents.footer`
 display: flex;
     align-items: center;
@@ -39,7 +38,6 @@ const Link = styledComponents.a`
     }
 `;
 
-
 const Footer = () => {
   return (
     <FooterEnd>
@@ -49,10 +47,18 @@ const Footer = () => {
       </p>
       <hr />
       <Contanct>
-        <Link href="https://www.linkedin.com/in/cristian-steve-carrillo-soracipa-6a5a21186" rel="noreferrer" target="_blank">
+        <Link
+          href="https://www.linkedin.com/in/cristian-steve-carrillo-soracipa-6a5a21186"
+          rel="noreferrer"
+          target="_blank"
+        >
           <LinkedInIcon /> - Linkedln
         </Link>
-        <Link href="https://api.whatsapp.com/send?phone=+573008688671" rel="noreferrer" target="_blank"  >
+        <Link
+          href="https://api.whatsapp.com/send?phone=+573008688671"
+          rel="noreferrer"
+          target="_blank"
+        >
           <WhatsAppIcon /> - WhatsApp
         </Link>
       </Contanct>
