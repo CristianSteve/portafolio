@@ -57,7 +57,7 @@ const Skills = () => {
   }, [lenguage]);
 
   return (
-    <section id="skill">
+    <section id={skill?.id}>
       <h2>{skill?.title1}</h2>
       <Lista>
         {mySkill.map((skill, num) => (

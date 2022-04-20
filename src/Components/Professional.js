@@ -94,7 +94,7 @@ const Professional = () => {
   }, [lenguage]);
 
   return (
-    <section id="experience">
+    <section id={experience?.id}>
       <h3>{experience?.title1}</h3>
       <List>
         {listCompany.map((e) => (

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
 import useLenguage from "../Hooks/useLenguage";
@@ -80,36 +80,35 @@ const Img = styled.img`
   border-radius: 50%;
   object-fit: cover;
   cursor: pointer;
-`
+`;
 
 const Header = () => {
-
   const { lenguage, flagLenguage } = useLenguage();
+  const [listNav, setListNav] = useState(null);
 
-  const handleChangeLenguage = () =>{
+  useEffect(() => {
+    setListNav(lenguage?.navList);
+  }, [lenguage]);
+
+  const handleChangeLenguage = () => {
     flagLenguage();
-  }
+  };
 
   return (
     <HeaderComponent>
       <Nav>
         <Ul>
           <Li>{"<Cristian />"}</Li>
-          <Li>
-            <Link to="/#home">Home</Link>
-          </Li>
-          <Li>
-            <Link to="/#about">About me</Link>
-          </Li>
-          <Li>
-            <Link to="/#skill">Skills</Link>
-          </Li>
-          <Li>
-            <Link to="/#experience">Experience</Link>
-          </Li>
-          <Li onClick={handleChangeLenguage}>
-            <Img src={lenguage?.icono} alt="idioma"/>
-          </Li>
+          {!!listNav && listNav.map((listNav) => (
+            <Li key={listNav.id}>
+              <Link to={`/#${listNav.id}`}>{listNav.value}</Link>
+            </Li>
+          ))}
+          {!!listNav && 
+            <Li onClick={handleChangeLenguage}>
+              <Img src={lenguage.icono} alt="idioma" />
+            </Li>
+          }
         </Ul>
       </Nav>
     </HeaderComponent>

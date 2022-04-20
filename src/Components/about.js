@@ -58,7 +58,7 @@ const About = () => {
   }, [lenguage]);
 
   return (
-    <Me id="about" className="container">
+    <Me id={about?.id} className="container">
       <div>
         <Item>
           <h3>{about?.title1}</h3>

@@ -18,8 +18,7 @@ const LenguageProvider = ({children}) =>{
         flagLenguage(){
             const changeLenguage = lenguage.lenguage === 'English' ? 'Español' : 'English';
             const [defaultLenguage] = idioma.filter((i) => i.lenguage === changeLenguage);
-            console.log(defaultLenguage)
-            setLenguage(defaultLenguage)
+            setLenguage(defaultLenguage);
         },
     }
 
