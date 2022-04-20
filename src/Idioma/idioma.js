@@ -1,7 +1,11 @@
+import col from './../bandera-colombia.png'
+import eeuu from './../bandera-eeuu.png'
+
 const idioma = [
   {
     id: 1,
     lenguage: "English",
+    icono : eeuu,
     navList: ["Home", "About me", "Skills", "Experience"],
     index: {
       title1: "¡Hello!",
@@ -25,6 +29,7 @@ const idioma = [
   },  {
     id: 2,
     lenguage: "Español",
+    icono : col,
     navList: ["Home", "Acerca", "Habilidades", "Experiencia"],
     index: {
       title1: "Hola!",

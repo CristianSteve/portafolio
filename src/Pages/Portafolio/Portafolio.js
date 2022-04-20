@@ -6,6 +6,7 @@ import Footer from "../../Components/Footer";
 import Portada from "../../Components/Portada";
 import Professional from "../../Components/Professional";
 import LenguageProvider from "../../Components/LenguageProvider";
+import ButtonTop from "../../Components/ButtonTop";
 
 const Portafolio = () => {
   return (
@@ -16,6 +17,7 @@ const Portafolio = () => {
       <Skills />
       <Professional />  
       <Footer />
+      <ButtonTop />
     </LenguageProvider>
   );
 };

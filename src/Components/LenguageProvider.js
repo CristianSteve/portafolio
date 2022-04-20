@@ -15,8 +15,11 @@ const LenguageProvider = ({children}) =>{
 
     const contextValue = {
         lenguage,
-        flagLenguage(lenguage){
-            setLenguage(idioma.filter((i) => i.lenguage === lenguage))
+        flagLenguage(){
+            const changeLenguage = lenguage.lenguage === 'English' ? 'Español' : 'English';
+            const [defaultLenguage] = idioma.filter((i) => i.lenguage === changeLenguage);
+            console.log(defaultLenguage)
+            setLenguage(defaultLenguage)
         },
     }
 

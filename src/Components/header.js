@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { HashLink as Link } from "react-router-hash-link";
+import useLenguage from "../Hooks/useLenguage";
 
 const HeaderComponent = styled.header`
   height: 10vh;
@@ -73,7 +74,22 @@ const Li = styled.li`
   font-size: 1.11rem;
 `;
 
+const Img = styled.img`
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+`
+
 const Header = () => {
+
+  const { lenguage, flagLenguage } = useLenguage();
+
+  const handleChangeLenguage = () =>{
+    flagLenguage();
+  }
+
   return (
     <HeaderComponent>
       <Nav>
@@ -90,6 +106,9 @@ const Header = () => {
           </Li>
           <Li>
             <Link to="/#experience">Experience</Link>
+          </Li>
+          <Li onClick={handleChangeLenguage}>
+            <Img src={lenguage?.icono} alt="idioma"/>
           </Li>
         </Ul>
       </Nav>
