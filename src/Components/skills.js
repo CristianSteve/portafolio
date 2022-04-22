@@ -66,7 +66,7 @@ const Skills = () => {
           <Box key={num} text={skill} />
         ))}
       </Lista>
-      <h2>{skill?.title1}</h2>
+      <h2>{skill?.title2}</h2>
       <Lista>
         {herramientas.map((skill, num) => (
           <Box key={num} text={skill} />
