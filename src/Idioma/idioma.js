@@ -64,12 +64,12 @@ const idioma = [
     },
     skill: {
       id: "habilidades",
-
-      title1: "Mis Habilidades Tecnicas",
+      title1: "Habilidades Tecnicas",
+      title2: "Herramientas Desarrollo",
     },
     experience: {
       id: "experiencia",
-      title1: "Mi Experiencia",
+      title1: "Experiencia",
     },
   },
 ];
