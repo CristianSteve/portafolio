@@ -25,16 +25,18 @@ const mySkill = [
   "JSON",
   "Linux",
   "Unix",
+  "Git"
 ];
 
-/* const herramientas = [
+const herramientas = [
   "Jira",
   "Postman",
   "SoapUI",
   "Insonmia",
   "Dimension",
-  "Visual COBOL Eclipse",
-]; */
+  "Visual COBOL",
+  "Atenea",
+];
 
 const Lista = styled.div`
   display: flex;
@@ -61,6 +63,12 @@ const Skills = () => {
       <h2>{skill?.title1}</h2>
       <Lista>
         {mySkill.map((skill, num) => (
+          <Box key={num} text={skill} />
+        ))}
+      </Lista>
+      <h2>{skill?.title1}</h2>
+      <Lista>
+        {herramientas.map((skill, num) => (
           <Box key={num} text={skill} />
         ))}
       </Lista>

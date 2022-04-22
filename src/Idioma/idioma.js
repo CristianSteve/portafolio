@@ -29,11 +29,12 @@ const idioma = [
     },
     skill: {
       id: "skills",
-      title1: "My Skills",
+      title1: "Skills",
+      title2: "development tools",
     },
     experience: {
       id: "experience",
-      title1: "My Experience",
+      title1: "Experience",
     },
   },
   {
