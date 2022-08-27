@@ -105,6 +105,7 @@ const Professional = () => {
             date={e.time}
             linkSrc={e.logo}
             positions={e.positions}
+            title={e.company}
           />
         ))}
       </List>

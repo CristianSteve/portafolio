@@ -30,7 +30,7 @@ const idioma = [
     skill: {
       id: "skills",
       title1: "Skills",
-      title2: "development tools",
+      title2: "Development Tools",
     },
     experience: {
       id: "experience",
